@@ -11,7 +11,7 @@ Docker Desktop 이 유료화 됨에 따라 윈도 환경에서 다른 대체 환
 |Buildah|✔|||OCI 빌드 지원|
 |[⭐minikube🔗](#minikube-podman-driver)||✔|✔|Podman을 드라이버로 설정하여 Build및 WSL2사용 가능|
 |microK8S||✔|✔|WSL2에서는 Snapd 설치 필요. Windows용은 별도 Hyper-V 인스턴스 생성 필요.|
-|[⭐Rancher Desktop(K3S)🔗](#rancherdesktop-recommended)|✔|✔|✔|Docker Desktop 과 가장 유사. CLI는 kubectl 사용해야 함.|
+|[⭐Rancher Desktop(K3S)🔗](#rancher-desktop-recommended)|✔|✔|✔|Docker Desktop 과 가장 유사. CLI는 kubectl 사용해야 함.|
 
 위 표에서와 같이 각 대체 도구별 지원 기능이 달라 조합하여 사용할 필요가 있습니다.<vr>
 이에 따라 추천하는 조합은 아래와 같습니다.
@@ -94,7 +94,7 @@ Docker Desktop 이 유료화 됨에 따라 윈도 환경에서 다른 대체 환
 ### 출처 : https://www.redhat.com/sysadmin/podman-windows-wsl2
 
 ## MiniKube (Podman Driver)
-  1. podman 설치
+  1. [podman 설치](#podman-recommended)
   2. minikube 설치
   ```bash
   curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
