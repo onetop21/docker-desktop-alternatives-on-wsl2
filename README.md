@@ -6,12 +6,12 @@ Docker Desktop 이 유료화 됨에 따라 윈도 환경에서 다른 대체 환
 
 |대체 도구|Image Build|Container Run|Orchestartion|비고|
 |---|:---:|:---:|:---:|---|
-|Docker.io(Docker-CE)🔗|✔|✔|✔|데몬을 직접 실행하거나 서비스 등록 필요|
-|⭐Podman🔗|✔|✔||쉬운 설치. Docker와 명령어 유사|
+|[Docker.io(Docker-CE)🔗](#dockerio-docker-ce)|✔|✔|✔|데몬을 직접 실행하거나 서비스 등록 필요|
+|[⭐Podman🔗](#podman-recommended)|✔|✔||쉬운 설치. Docker와 명령어 유사|
 |Buildah|✔|||OCI 빌드 지원|
-|⭐minikube🔗||✔|✔|Podman을 드라이버로 설정하여 Build및 WSL2사용 가능|
+|[⭐minikube🔗](#minikube-podman-driver)||✔|✔|Podman을 드라이버로 설정하여 Build및 WSL2사용 가능|
 |microK8S||✔|✔|WSL2에서는 Snapd 설치 필요. Windows용은 별도 Hyper-V 인스턴스 생성 필요.|
-|⭐Rancher Desktop(K3S)🔗|✔|✔|✔|Docker Desktop 과 가장 유사. CLI는 kubectl 사용해야 함.|
+|[⭐Rancher Desktop(K3S)🔗](#rancherdesktop-recommended)|✔|✔|✔|Docker Desktop 과 가장 유사. CLI는 kubectl 사용해야 함.|
 
 위 표에서와 같이 각 대체 도구별 지원 기능이 달라 조합하여 사용할 필요가 있습니다.<vr>
 이에 따라 추천하는 조합은 아래와 같습니다.
@@ -107,9 +107,10 @@ Docker Desktop 이 유료화 됨에 따라 윈도 환경에서 다른 대체 환
   4. alias 등록
   ```bash
   alias kubectl="minikube kubectl --"
+  ```
 ### 출처 : https://gist.github.com/fardjad/6c95cda623d061bb830538c6c631d2e6
 
-### Rancher Desktop (Recommended)
+## Rancher Desktop (Recommended)
   1. 최신 바이너리 다운로드 및 실행
   https://github.com/rancher-sandbox/rancher-desktop/releases
   
@@ -117,7 +118,7 @@ Docker Desktop 이 유료화 됨에 따라 윈도 환경에서 다른 대체 환
   
   ❗ Build는 kim(kubernetes image manager)를 이용한다.
   ```bash
-  kim build
+  kim build .
   kim pull ubuntu:latest
   ...
   ```
